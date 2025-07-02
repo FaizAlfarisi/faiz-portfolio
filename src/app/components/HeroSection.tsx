@@ -1,8 +1,9 @@
+import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
     <section
       id="hero"
@@ -10,8 +11,8 @@ const HeroSection = () => {
     >
       <div className="container max-w-4xl mx-auto text-center">
         <div className="space-y-6">
-          <div className="flex justify-center">
-            <Image  src="/profile.png" alt='profile-image' width={500} height={500} className="w-48 h-48 rounded-full"/>
+          <div className="flex justify-center pt-4">
+            <Image  src="/profile.png" alt='profile-image' width={500} height={500} className="md:w-48 md:h-48 w-30 h-30 rounded-full"/>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
@@ -20,27 +21,28 @@ const HeroSection = () => {
             <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">Alfarisi</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2xl: mx-auto opacity-0 animate-fade-in-delay-3">Undergraduate Mathematics Student at Universitas Negeri Malang<br/>Backend Developer | ML/AI Enthusiast</p>
+          <p className="text-md md:text-lg text-muted-foreground max-2xl mx-auto opacity-0 animate-fade-in-delay-3">I enjoy solving problems, leading with purpose, and learning through building. Math gave me structure, tech gave me tools — the rest is about creating something that matters.</p>
 
-          <div className="flex justify-center gap-5 z-50">
-            <Link href="https://github.com/FaizAlfarisi">
+          <div className="flex justify-center gap-5 z-50 opacity-0 animate-fade-in-delay-4">
+            <Link href="https://github.com/FaizAlfarisi" className="text-xl md:text-2xl hover:text-primary transition-colors">
               <FaGithub/>
             </Link>
-            <Link href="https://www.linkedin.com/in/mfaizalfarisi/">
+            <Link href="https://www.linkedin.com/in/mfaizalfarisi/" className="text-xl md:text-2xl hover:text-primary transition-colors">
               <FaLinkedin/>
             </Link>
-            <Link href="https://www.instagram.com/faiz.alfrs/">
+            <Link href="https://www.instagram.com/faiz.alfrs/" className="text-xl md:text-2xl hover:text-primary transition-colors">
               <FaInstagram/>
             </Link>
           </div>
 
-          <div>
-            <Link href="">Download CV</Link>
-            <Link href="#contact">Contact Me</Link>
+          <div className="pt-3 opacity-0 animate-fade-in-delay-5">
+            <Link href="#project" className="cosmic-button">View My Work</Link>
           </div>
         </div>
+      </div>
 
-
+      <div className="absolute bottom-8 transform flex flex-col items-center animate-bounce">
+        <span className="text-sm text-muted-foreground mb-2">Scroll </span><ArrowDown className="h-5 w-5 text-primary"/>
       </div>
     </section>
 
