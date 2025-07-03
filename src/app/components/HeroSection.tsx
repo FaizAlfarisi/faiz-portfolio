@@ -35,8 +35,9 @@ export const HeroSection = () => {
             </Link>
           </div>
 
-          <div className="pt-3 opacity-0 animate-fade-in-delay-5">
-            <Link href="#project" className="cosmic-button">View My Work</Link>
+          <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center opacity-0 animate-fade-in-delay-5">
+            <Link href="#projects" className="cosmic-button"><p>View My Work</p></Link>
+            <Link href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/20 transition color duration-300">Download CV</Link>              
           </div>
         </div>
       </div>
