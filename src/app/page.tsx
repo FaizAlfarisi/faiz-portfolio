@@ -1,8 +1,11 @@
-import AboutSection from "./components/AboutSection";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import StarBackground from "./components/StarBackground";
-import ThemeToggle from "./components/ThemeToggle";
+import AboutSection from "../components/sections/AboutSection";
+import HeroSection from "../components/sections/HeroSection";
+import Navbar from "../components/layout/Navbar";
+import ProjectsSection from "../components/sections/ProjectsSection";
+import StarBackground from "../components/layout/StarBackground";
+import ThemeToggle from "../components/ui/ThemeToggle";
+import ContactSection from "@/components/sections/ContactSection";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -20,9 +23,12 @@ export default function Home() {
       <main>
         <HeroSection/>
         <AboutSection/>
+        <ProjectsSection/>
+        <ContactSection/>
       </main>
 
       {/* Footer */}
+      <Footer/>
 
     </div>
   );

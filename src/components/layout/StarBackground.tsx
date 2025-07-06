@@ -36,8 +36,8 @@ export const StarBackground = () => {
         size: Math.random() * 2 + 1,
         x: Math.random() * 100,
         y: Math.random() * 15,
-        delay: Math.random() * 15,
-        animationDuration: Math.random() * 3 + 3,
+        delay: Math.random() * 20,
+        animationDuration: Math.random() * 3 + 5,
       });
     }  
     setMeteors(newMeteors);
@@ -54,7 +54,7 @@ export const StarBackground = () => {
         x: Math.random() * 100,
         y: Math.random() * 10,
         delay: Math.random() * 0.5 + 0.5,
-        animationDuration: Math.random() * 4 + 2,
+        animationDuration: Math.random() * 4 + 3,
       });
     }  
     setFallingStars(newFallingStars);

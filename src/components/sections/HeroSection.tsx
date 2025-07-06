@@ -1,7 +1,7 @@
 import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 
 export const HeroSection = () => {
   return (
@@ -25,13 +25,13 @@ export const HeroSection = () => {
 
           <div className="flex justify-center gap-5 z-50 opacity-0 animate-fade-in-delay-4">
             <Link href="https://github.com/FaizAlfarisi" className="text-xl md:text-2xl hover:text-primary transition-colors">
-              <FaGithub/>
+              <SiGithub/>
             </Link>
             <Link href="https://www.linkedin.com/in/mfaizalfarisi/" className="text-xl md:text-2xl hover:text-primary transition-colors">
-              <FaLinkedin/>
+              <SiLinkedin/>
             </Link>
             <Link href="https://www.instagram.com/faiz.alfrs/" className="text-xl md:text-2xl hover:text-primary transition-colors">
-              <FaInstagram/>
+              <SiInstagram/>
             </Link>
           </div>
 
