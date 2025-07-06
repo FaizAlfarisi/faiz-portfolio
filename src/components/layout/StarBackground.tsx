@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Meteor, Star } from "../types";
+import { Meteor, Star } from "../../types";
 
 // id, size, x, y, opacity, animationDuration
 // id, size, x, y, delay, animationDuration
