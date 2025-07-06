@@ -12,13 +12,13 @@ const Footer = () => {
         </div>
         <div className='w-xl'></div>
         <div className='flex space-x-6'>
-          <Link href="/" className='text-xl hover:text-primary transition-colors duration-300'>
+          <Link href="https://github.com/FaizAlfarisi" className='text-xl hover:text-primary transition-colors duration-300'>
             <SiGithub/>
           </Link>
-          <Link href="/" className='text-xl hover:text-primary transition-colors duration-300'>
+          <Link href="https://www.linkedin.com/in/mfaizalfarisi/" className='text-xl hover:text-primary transition-colors duration-300'>
             <SiLinkedin/>
           </Link>
-          <Link href="/" className='text-xl hover:text-primary transition-colors duration-300'>
+          <Link href="https://www.instagram.com/faiz.alfrs/" className='text-xl hover:text-primary transition-colors duration-300'>
             <SiInstagram/>
           </Link>
       </div>
