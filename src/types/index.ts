@@ -25,3 +25,10 @@ export type Projects = {
   demoLink: string;
   image: string;
 }
+
+export type ProjectCardProps = {
+  data: Projects,
+  imageHeight?: string;
+  descriptionClamp?: string;
+  tagsHeight?: string;
+};

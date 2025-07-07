@@ -12,7 +12,7 @@ export const projects: Projects[] = [
   },
   {
     id: 1,
-    title: 'Mushroom Classification',
+    title: 'Mushroom Classification Website',
     description: 'This project involves the development of an AI model for the classification of poisonous and edible mushrooms, with a web-based implementation. The dataset used comes from kaggle, performing various exploratory data analysis to obtain a reliable machine learning model',
     tags: ['Machine Learning', 'Flask API', 'Supervised Learning', 'KNN', 'Classification'],
     githubLink: 'https://github.com/FaizAlfarisi/MushroomClassification',
@@ -32,7 +32,7 @@ export const projects: Projects[] = [
     id: 3,
     title: 'Bank Transaction EDA for Fraud Detection',
     description: 'Exploratory data analysis of bank transaction datasets such as descriptive statistics and data visualization to get a detailed look of transactional behavior and financial activity patterns. Moreover, clustering with machine learning models was also performed to show the fraud transactions.',
-    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'Data Analyst', 'Exploratory Data Analyst', 'Clustering', 'K-Means'],
+    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'Data Analyst', 'Clustering', 'K-Means'],
     githubLink: '',
     demoLink: '',
     image: '/projects/clustering.png',
@@ -49,7 +49,7 @@ export const projects: Projects[] = [
   {
     id: 5,
     title: 'SieR-Te',
-    description: 'This project focuses on the development of a web-based School Information System called SieR-Te, built using Go (Fiber) as the backend framework and PostgreSQL as the database. It aims to streamline school administration by providing modules for academic information, student management, announcements, and attendance tracking. The system emphasizes scalability, performance, and clean RESTful API integration, supporting a modern and efficient school management experience.',
+    description: 'SieR-Te is a web-based School Information System built with Go (Fiber) and PostgreSQL to streamline school administration. It supports modules for student data, academic records, announcements, and attendance. With a focus on clean RESTful APIs and scalable performance, the system aims to enhance operational efficiency and user experience in educational environments.',
     tags: ['GO', 'Go Fiber', 'GORM', 'REST API', 'PostgreSQL', 'Next.js', 'TailwindCSS'],
     githubLink: '',
     demoLink: '',

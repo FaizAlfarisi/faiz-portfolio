@@ -34,7 +34,7 @@ const ThemeToggle = () => {
 
   return (
     <button onClick={toggleTheme} className={cn(
-      "fixed max-sm:hidden top-5 right-5 z-50 p-5 rounded-full transition-color duration-300",
+      "right-5 z-50 rounded-full transition-color duration-300",
       "focus:outline-none",
       "hover:cursor-pointer"
       )}>

@@ -2,8 +2,9 @@
 
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import ThemeToggle from "../ui/ThemeToggle";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -15,6 +16,9 @@ const navItems = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const router = useRouter(); 
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,34 +28,47 @@ export const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+  
+  const handleNavClick = (href: string) => {
+    if (pathname !== "/") {
+      router.push("/" + href); 
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView();
+      }
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className={cn(
           "fixed w-full z-40 transition-all duration-300",
-          isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+          isScrolled ? "py-3 bg-background/80" : "py-5"
         )}
       >
       <div className="container flex items-center justify-between">
-        <Link 
-          className="text-2xl font-bold text-primary flex items-center"
-          href="#hero"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground">Alfarisi</span> Portfolio
-          </span>
-        </Link>
+      <button 
+        onClick={() => handleNavClick("#hero")}
+        className="text-2xl font-bold text-primary flex items-center hover:cursor-pointer"
+      >
+        <span className="relative z-10">
+          <span className="text-glow text-foreground">Alfarisi</span> Portfolio
+        </span>
+      </button>
 
         {/* Desktop nav */}
         <div className="hidden md:flex space-x-12">
           {navItems.map((item,key) => (
-            <Link
+            <button
               key={key}
-              href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              onClick={() => handleNavClick(item.href)}
+              className="text-foreground/80 hover:text-primary transition-colors duration-300 hover:cursor-pointer"
             >
               {item.name}
-            </Link>
+            </button>
           ))}
+          <ThemeToggle/>
         </div>
 
         {/* Mobile nav */}
@@ -61,24 +78,20 @@ export const Navbar = () => {
         </button>
 
         <div className={cn(
-          "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden", 
-          isMenuOpen ? "opacity-100 pointer-events-auto" : "hidden pointer-none"
-        )}>
-          <div className="flex flex-col space-y-8 text-xl">
-            {isMenuOpen ? 
-              navItems.map((item,key) => (
-                <Link
+            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden", 
+            isMenuOpen ? "opacity-100 pointer-events-auto" : "hidden pointer-none"
+          )}>
+          <div className="flex flex-col space-y-8 text-xl items-center">
+            {navItems.map((item,key) => (
+                <button
                   key={key}
-                  href={item.href}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-foreground/90 hover:text-primary transition-colors duration-300"
                 >
                   {item.name}
-                </Link>
-              )) :
-              ""
-            }
-            
+                </button>
+              ))}
+            <ThemeToggle />
           </div>          
         </div>
       </div>

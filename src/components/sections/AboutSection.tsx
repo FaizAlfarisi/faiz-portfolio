@@ -13,7 +13,7 @@ export const AboutSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="flex items-center flex-col space-y-6 text-center">
-            <Image src="/speaker.png" alt="Speaker Build With AI 2025" width={500} height={500} className="w-100 h-100 grayscale hover:grayscale-0"/>
+            <Image src="/speaker.png" alt="Speaker Build With AI 2025" width={500} height={500} className="w-full max-w-xs aspect-square object-contain md:grayscale hover:grayscale-0"/>
           </div>
 
           <div className="grid grid-cols-1 gap-4 items-center">
@@ -60,7 +60,7 @@ export const AboutSection = () => {
               </div>              
             </div>
             <div className="flex justify-center">
-              <Link href="#about" className="cosmic-button">Learn More</Link>
+              <Link href="/about" className="cosmic-button">Learn More</Link>
             </div>
           </div>
         </div>
