@@ -1,7 +1,7 @@
 import { projects } from '@/contents/projects'
 import Link from 'next/link'
 import React from 'react'
-import ProjectCard from '../ui/ProjectCard'
+import ProjectCard from '../../ui/ProjectCard'
 
 const ProjectsSection = () => { 
 

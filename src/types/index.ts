@@ -32,3 +32,10 @@ export type ProjectCardProps = {
   descriptionClamp?: string;
   tagsHeight?: string;
 };
+
+export type Technologies = {
+  title: string;
+  level: string;
+  logo: string;
+  category: string;
+}
